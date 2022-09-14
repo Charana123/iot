@@ -19,8 +19,8 @@ data = {
 }
 
 @app.route('/') 
-def index(name=None):
-    return 'hello world'
+def room(name=None):
+    return render_template('room.html', data=json.dumps(data[name]))
 
 @app.route('/room') 
 @app.route('/room/<name>')

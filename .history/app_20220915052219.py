@@ -18,10 +18,6 @@ data = {
     ]
 }
 
-@app.route('/') 
-def index(name=None):
-    return 'hello world'
-
 @app.route('/room') 
 @app.route('/room/<name>')
 def room(name=None):
@@ -31,6 +27,3 @@ def room(name=None):
 def update():
     # post request sends data to update database
     return
-
-if __name__ == "__main__":
-   app.run(host='0.0.0.0', port=5000)

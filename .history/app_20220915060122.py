@@ -18,10 +18,6 @@ data = {
     ]
 }
 
-@app.route('/') 
-def index(name=None):
-    return 'hello world'
-
 @app.route('/room') 
 @app.route('/room/<name>')
 def room(name=None):
